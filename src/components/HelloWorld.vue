@@ -1,4 +1,5 @@
 <template>
+<div>
   <div class="hello">
     <div :class="{anime:anime,anime2:anime2}">
       <span class="one"></span>
@@ -34,6 +35,7 @@
       <h3 class="date" v-if="view">{{datebuild()}}</h3>
     </div>
   </div>
+ </div> 
 </template>
 
 <script>
@@ -150,7 +152,7 @@ export default {
             },
             show3(){
               if(this.forcast.countries ==''){
-                
+                return
               }
             },
           datebuild(){
@@ -187,6 +189,11 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   transition: all 0.5s ease-in-out;
+}
+
+.hello{
+  overflow: hidden;
+  height: 100vh;
 }
 .rain{
    width: 100%;
